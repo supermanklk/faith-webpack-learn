@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {RemoveConsolePlugin} = require('./src/plugins/RemoveConsolePlugin')
 const path = require('path');
 
 module.exports = {
@@ -10,5 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'HtmlWebpackPlugin',
-    })],
+    }),
+    new RemoveConsolePlugin()
+  ],
 };
